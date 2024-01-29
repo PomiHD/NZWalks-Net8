@@ -10,11 +10,11 @@ namespace NZWalks.Controllers;
 [ApiController]
 public class RegionsController : ControllerBase
 {
-    private readonly NZWalksDbContext dbContext;
+    private readonly NzWalksDbContext _dbContext;
 
-    public RegionsController(NZWalksDbContext dbContext)
+    public RegionsController(NzWalksDbContext dbContext)
     {
-        this.dbContext = dbContext;
+        _dbContext = dbContext;
     }
 
     //Get all regions
@@ -22,7 +22,7 @@ public class RegionsController : ControllerBase
     [HttpGet]
     public IActionResult GetAll()
     {
-        var regions = dbContext.Regions.ToList();
+        var regions = _dbContext.Regions.ToList();
 
         return Ok(regions);
     }
@@ -35,7 +35,7 @@ public class RegionsController : ControllerBase
     {
         // var regions = dbContext.Regions.Find(id);
         // Get Region Domain Model From Database
-        var region = dbContext.Regions.FirstOrDefault(x => x.Id == id);
+        var region = _dbContext.Regions.FirstOrDefault(x => x.Id == id);
         // Check if region is null before accessing its properties
         if (region == null) return NotFound();
 
@@ -65,8 +65,8 @@ public class RegionsController : ControllerBase
         };
 
         // Use Domain Model to creat Region
-        dbContext.Regions.Add(regionDomainModel);
-        dbContext.SaveChanges();
+        _dbContext.Regions.Add(regionDomainModel);
+        _dbContext.SaveChanges();
 
         //Map Domain Model back to DTO
         var regionDto = new RegionDto
@@ -86,14 +86,14 @@ public class RegionsController : ControllerBase
     public IActionResult Update([FromRoute] Guid id, [FromBody] UpdateRegionDto updateRegionDto)
     {
         // Check if region exist
-        var regionDomainModel = dbContext.Regions.FirstOrDefault(x => x.Id == id);
+        var regionDomainModel = _dbContext.Regions.FirstOrDefault(x => x.Id == id);
         if (regionDomainModel == null) return NotFound();
 
         //Map DTO to Domain Model
         regionDomainModel.Code = updateRegionDto.Code;
         regionDomainModel.Name = updateRegionDto.Name;
         regionDomainModel.RegionImageUrl = updateRegionDto.RegionImageUrl;
-        dbContext.SaveChanges();
+        _dbContext.SaveChanges();
 
         //Convert Domain Model to DTO 
         var regionDto = new RegionDto
@@ -112,12 +112,12 @@ public class RegionsController : ControllerBase
     [Route("{id:guid}")]
     public IActionResult Delete([FromRoute] Guid id)
     {
-        var regionDomainModel = dbContext.Regions.FirstOrDefault(x => x.Id == id);
+        var regionDomainModel = _dbContext.Regions.FirstOrDefault(x => x.Id == id);
         if (regionDomainModel == null) return NotFound();
 
         //Delete region
-        dbContext.Regions.Remove(regionDomainModel);
-        dbContext.SaveChanges();
+        _dbContext.Regions.Remove(regionDomainModel);
+        _dbContext.SaveChanges();
 
         //Return the deleted region
         //Map Domain Model to DTO
