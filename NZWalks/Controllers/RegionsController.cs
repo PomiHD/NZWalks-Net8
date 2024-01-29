@@ -78,4 +78,34 @@ public class RegionsController : ControllerBase
         };
         return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
     }
+
+    // Update region
+    // PUT: https://localhost/7031/api/regions/{id}
+    [HttpPut]
+    [Route("{id:guid}")]
+    public IActionResult Update([FromRoute] Guid id, [FromBody] UpdateRegionDto updateRegionDto)
+    {
+        // Check if region exist
+        var regionDomainModel = dbContext.Regions.FirstOrDefault(x => x.Id == id);
+        if (regionDomainModel == null)
+        {
+            return NotFound();
+        }
+
+        //Map DTO to Domain Model
+        regionDomainModel.Code = updateRegionDto.Code;
+        regionDomainModel.Name = updateRegionDto.Name;
+        regionDomainModel.RegionImageUrl = updateRegionDto.RegionImageUrl;
+        dbContext.SaveChanges();
+
+        //Convert Domain Model to DTO 
+        var regionDto = new RegionDto
+        {
+            Id = regionDomainModel.Id,
+            Code = regionDomainModel.Code,
+            Name = regionDomainModel.Name,
+            RegionImageUrl = regionDomainModel.RegionImageUrl
+        };
+        return Ok(regionDto);
+    }
 }
