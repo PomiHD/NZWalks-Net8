@@ -1,60 +1,81 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NZWalks.Data;
 using NZWalks.Models.Domain;
 using NZWalks.Models.DTO;
 
-namespace NZWalks.Controllers
+namespace NZWalks.Controllers;
+
+//https:localhost:7103/api/regions
+[Route("api/[controller]")]
+[ApiController]
+public class RegionsController : ControllerBase
 {
-    //https:localhost:7103/api/regions
-    [Route("api/[controller]")]
-    [ApiController]
-    public class RegionsController : ControllerBase
+    private readonly NZWalksDbContext dbContext;
+
+    public RegionsController(NZWalksDbContext dbContext)
     {
-        private readonly NZWalksDbContext dbContext;
+        this.dbContext = dbContext;
+    }
 
-        public RegionsController(NZWalksDbContext dbContext)
+    //Get all regions
+    // Get: https://localhost:7103/api/regions
+    [HttpGet]
+    public IActionResult GetAll()
+    {
+        var regions = dbContext.Regions.ToList();
+
+        return Ok(regions);
+    }
+
+    //Get region by Id
+    // Get: https://localhost:7103/api/regions/{id}
+    [HttpGet]
+    [Route("{id:guid}")]
+    public IActionResult GetById([FromRoute] Guid id)
+    {
+        // var regions = dbContext.Regions.Find(id);
+        // Get Region Domain Model From Database
+        var region = dbContext.Regions.FirstOrDefault(x => x.Id == id);
+        // Check if region is null before accessing its properties
+        if (region == null) return NotFound();
+
+        //Since region is not null, we can safely map it to RegionDto,
+        //Map Region Domain Model to Region Dto
+        var regionDto = new RegionDto
         {
-            this.dbContext = dbContext;
-        }
+            Id = region.Id,
+            Code = region.Code,
+            Name = region.Name,
+            RegionImageUrl = null
+        };
+        return Ok(regionDto);
+    }
 
-        //Get all regions
-        // Get: https://localhost:7103/api/regions
-        [HttpGet]
-        public IActionResult GetAll()
+    //POST to create new region
+    //POST: https://localhost:7031/api/regions
+    [HttpPost]
+    public IActionResult Create([FromBody] AddRegionRequestDto addRegionRequestDto)
+    {
+        //Map or convert DTO to Domain Model
+        var regionDomainModel = new Region
         {
-            var regions = dbContext.Regions.ToList();
+            Code = addRegionRequestDto.Code,
+            Name = addRegionRequestDto.Name,
+            RegionImageUrl = addRegionRequestDto.RegionImageUrl
+        };
 
-            return Ok(regions);
-        }
+        // Use Domain Model to creat Region
+        dbContext.Regions.Add(regionDomainModel);
+        dbContext.SaveChanges();
 
-        //Get region by Id
-        // Get: https://localhost:7103/api/regions/{id}
-        [HttpGet]
-        [Route("{id:guid}")]
-        public IActionResult GetById([FromRoute] Guid id)
+        //Map Domain Model back to DTO
+        var regionDto = new RegionDto
         {
-            // var regions = dbContext.Regions.Find(id);
-            // Get Region Domain Model From Database
-            var region = dbContext.Regions.FirstOrDefault(x => x.Id == id);
-            if (region == null)
-            {
-                return NotFound();
-            }
-
-            //Map Region Domain Model to Region Dto
-            var regionDto = new RegionDto
-            {
-                Id = region.Id,
-                Code = region.Code,
-                Name = region.Name,
-                RegionImageUrl = null
-            };
-            return Ok(regionDto);
-        }
+            Id = regionDomainModel.Id,
+            Code = regionDomainModel.Code,
+            Name = regionDomainModel.Name,
+            RegionImageUrl = regionDomainModel.RegionImageUrl
+        };
+        return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
     }
 }
