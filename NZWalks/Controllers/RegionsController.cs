@@ -87,10 +87,7 @@ public class RegionsController : ControllerBase
     {
         // Check if region exist
         var regionDomainModel = dbContext.Regions.FirstOrDefault(x => x.Id == id);
-        if (regionDomainModel == null)
-        {
-            return NotFound();
-        }
+        if (regionDomainModel == null) return NotFound();
 
         //Map DTO to Domain Model
         regionDomainModel.Code = updateRegionDto.Code;
@@ -99,6 +96,31 @@ public class RegionsController : ControllerBase
         dbContext.SaveChanges();
 
         //Convert Domain Model to DTO 
+        var regionDto = new RegionDto
+        {
+            Id = regionDomainModel.Id,
+            Code = regionDomainModel.Code,
+            Name = regionDomainModel.Name,
+            RegionImageUrl = regionDomainModel.RegionImageUrl
+        };
+        return Ok(regionDto);
+    }
+
+    // Delete region
+    // DELETE: https://localhost/7031/api/regions/{id}
+    [HttpDelete]
+    [Route("{id:guid}")]
+    public IActionResult Delete([FromRoute] Guid id)
+    {
+        var regionDomainModel = dbContext.Regions.FirstOrDefault(x => x.Id == id);
+        if (regionDomainModel == null) return NotFound();
+
+        //Delete region
+        dbContext.Regions.Remove(regionDomainModel);
+        dbContext.SaveChanges();
+
+        //Return the deleted region
+        //Map Domain Model to DTO
         var regionDto = new RegionDto
         {
             Id = regionDomainModel.Id,
