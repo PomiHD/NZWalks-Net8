@@ -1,7 +1,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using NZWalks.CustomActionFilters;
-using NZWalks.Data;
 using NZWalks.Models.Domain;
 using NZWalks.Models.DTO;
 using NZWalks.Models.Repositories;
@@ -13,15 +12,13 @@ namespace NZWalks.Controllers;
 [ApiController]
 public class RegionsController : ControllerBase
 {
-    private readonly NzWalksDbContext _dbContext;
     private readonly IMapper _mapper;
     private readonly IRegionRepository _regionRepository;
 
 
-    public RegionsController(NzWalksDbContext dbContext, IRegionRepository regionRepository,
+    public RegionsController(IRegionRepository regionRepository,
         IMapper mapper)
     {
-        _dbContext = dbContext;
         _regionRepository = regionRepository;
         _mapper = mapper;
     }
