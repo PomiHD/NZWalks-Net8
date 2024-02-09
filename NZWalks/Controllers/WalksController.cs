@@ -25,13 +25,18 @@ public class WalksController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] AddWalkRequestDto addWalkRequestDto)
     {
-        // Map DTO to Domain Model
-        var walkDomainModel = _mapper.Map<Walk>(addWalkRequestDto);
+        if (ModelState.IsValid)
+        {
+            // Map DTO to Domain Model
+            var walkDomainModel = _mapper.Map<Walk>(addWalkRequestDto);
 
-        await _walkRepository.CreateAsync(walkDomainModel);
+            await _walkRepository.CreateAsync(walkDomainModel);
 
-        // Map Domain Model to DTO
-        return Ok(_mapper.Map<WalkDto>(walkDomainModel));
+            // Map Domain Model to DTO
+            return Ok(_mapper.Map<WalkDto>(walkDomainModel));
+        }
+
+        return BadRequest(ModelState);
     }
 
     //Get ALL Walks
@@ -64,14 +69,19 @@ public class WalksController : ControllerBase
     [Route("{id:guid}")]
     public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateWalkRequestDto updateWalkRequestDto)
     {
-        // Map DTO to Domain Model
-        var walkDomainModel = _mapper.Map<Walk>(updateWalkRequestDto);
+        if (ModelState.IsValid)
+        {
+            // Map DTO to Domain Model
+            var walkDomainModel = _mapper.Map<Walk>(updateWalkRequestDto);
 
-        var updatedWalk = await _walkRepository.UpdateAsync(id, walkDomainModel);
-        if (updatedWalk == null) return NotFound();
+            var updatedWalk = await _walkRepository.UpdateAsync(id, walkDomainModel);
+            if (updatedWalk == null) return NotFound();
 
-        // Map Domain Model to DTO
-        return Ok(_mapper.Map<WalkDto>(updatedWalk));
+            // Map Domain Model to DTO
+            return Ok(_mapper.Map<WalkDto>(updatedWalk));
+        }
+
+        return BadRequest(ModelState);
     }
 
     // Delete Walk by Id

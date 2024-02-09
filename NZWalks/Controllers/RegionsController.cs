@@ -58,16 +58,21 @@ public class RegionsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] AddRegionRequestDto addRegionRequestDto)
     {
-        //Map or convert DTO to Domain Model
-        var regionDomainModel = _mapper.Map<Region>(addRegionRequestDto);
+        if (ModelState.IsValid)
+        {
+            //Map or convert DTO to Domain Model
+            var regionDomainModel = _mapper.Map<Region>(addRegionRequestDto);
 
-        // Use Domain Model to creat Region
-        regionDomainModel = await _regionRepository.CreateAsync(regionDomainModel);
+            // Use Domain Model to creat Region
+            regionDomainModel = await _regionRepository.CreateAsync(regionDomainModel);
 
-        //Map Domain Model back to DTO
-        var regionDto = _mapper.Map<RegionDto>(regionDomainModel);
+            //Map Domain Model back to DTO
+            var regionDto = _mapper.Map<RegionDto>(regionDomainModel);
 
-        return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
+            return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
+        }
+
+        return BadRequest(ModelState);
     }
 
     // Update region
