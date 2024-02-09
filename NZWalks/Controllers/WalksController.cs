@@ -73,4 +73,17 @@ public class WalksController : ControllerBase
         // Map Domain Model to DTO
         return Ok(_mapper.Map<WalkDto>(updatedWalk));
     }
+
+    // Delete Walk by Id
+    // DELETE: https://localhost:7103/api/walks/{id}
+    [HttpDelete]
+    [Route("{id:guid}")]
+    public async Task<IActionResult> Delete([FromRoute] Guid id)
+    {
+        var deletedWalkDomainModel = await _walkRepository.DeleteAsync(id);
+        if (deletedWalkDomainModel == null) return NotFound();
+
+        // Map Domain Model to DTO
+        return Ok(_mapper.Map<WalkDto>(deletedWalkDomainModel));
+    }
 }

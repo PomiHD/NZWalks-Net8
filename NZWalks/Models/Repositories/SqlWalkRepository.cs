@@ -51,4 +51,14 @@ public class SqlWalkRepository : IWalkRepository
         await _dbContext.SaveChangesAsync();
         return existingWalk;
     }
+
+    public async Task<Walk?> DeleteAsync(Guid id)
+    {
+        var existingWalk = await _dbContext.Walks.FirstOrDefaultAsync(x => x.Id == id);
+        if (existingWalk == null) return null;
+        _dbContext.Walks.Remove(existingWalk);
+        await _dbContext.SaveChangesAsync();
+
+        return existingWalk;
+    }
 }
