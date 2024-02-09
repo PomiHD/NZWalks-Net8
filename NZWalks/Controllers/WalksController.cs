@@ -57,4 +57,20 @@ public class WalksController : ControllerBase
         //Map Domain Model to DTO
         return Ok(_mapper.Map<WalkDto>(walkDomainModel));
     }
+
+    // Update Walk by Id
+    // PUT: https://localhost:7103/api/walks/{id}
+    [HttpPut]
+    [Route("{id:guid}")]
+    public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateWalkRequestDto updateWalkRequestDto)
+    {
+        // Map DTO to Domain Model
+        var walkDomainModel = _mapper.Map<Walk>(updateWalkRequestDto);
+
+        var updatedWalk = await _walkRepository.UpdateAsync(id, walkDomainModel);
+        if (updatedWalk == null) return NotFound();
+
+        // Map Domain Model to DTO
+        return Ok(_mapper.Map<WalkDto>(updatedWalk));
+    }
 }
