@@ -1,5 +1,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using NZWalks.CustomActionFilters;
 using NZWalks.Data;
 using NZWalks.Models.Domain;
 using NZWalks.Models.DTO;
@@ -56,29 +57,26 @@ public class RegionsController : ControllerBase
     //POST to create new region
     //POST: https://localhost:7031/api/regions
     [HttpPost]
+    [ValidateModel]
     public async Task<IActionResult> Create([FromBody] AddRegionRequestDto addRegionRequestDto)
     {
-        if (ModelState.IsValid)
-        {
-            //Map or convert DTO to Domain Model
-            var regionDomainModel = _mapper.Map<Region>(addRegionRequestDto);
+        //Map or convert DTO to Domain Model
+        var regionDomainModel = _mapper.Map<Region>(addRegionRequestDto);
 
-            // Use Domain Model to creat Region
-            regionDomainModel = await _regionRepository.CreateAsync(regionDomainModel);
+        // Use Domain Model to creat Region
+        regionDomainModel = await _regionRepository.CreateAsync(regionDomainModel);
 
-            //Map Domain Model back to DTO
-            var regionDto = _mapper.Map<RegionDto>(regionDomainModel);
+        //Map Domain Model back to DTO
+        var regionDto = _mapper.Map<RegionDto>(regionDomainModel);
 
-            return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
-        }
-
-        return BadRequest(ModelState);
+        return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
     }
 
     // Update region
     // PUT: https://localhost/7031/api/regions/{id}
     [HttpPut]
     [Route("{id:guid}")]
+    [ValidateModel]
     public async Task<IActionResult> Update([FromRoute] Guid id,
         [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
     {
