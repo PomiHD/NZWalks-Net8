@@ -20,12 +20,23 @@ public class SqlWalkRepository : IWalkRepository
         return walk;
     }
 
-    public async Task<List<Walk>> GetAllAsync()
+    public async Task<List<Walk>> GetAllAsync(string? filterOn = null, string? filterQuery = null)
     {
-        return await _dbContext.Walks
+        var walks = _dbContext.Walks
             .Include("Difficulty")
             .Include("Region")
-            .ToListAsync();
+            .AsQueryable();
+
+        //Filtering
+        if (!string.IsNullOrWhiteSpace(filterOn) && !string.IsNullOrWhiteSpace(filterQuery))
+            walks = filterOn.ToLower() switch
+            {
+                "name" => walks.Where(w => w.Name.Contains(filterQuery)),
+                "region" => walks.Where(w => w.Region.Name.Contains(filterQuery)),
+                "difficulty" => walks.Where(w => w.Difficulty.Name.Contains(filterQuery)),
+                _ => walks
+            };
+        return await walks.ToListAsync();
     }
 
     public async Task<Walk?> GetByIdAsync(Guid id)
