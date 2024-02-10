@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NZWalks.Models.DTO;
+using NZWalks.Models.Repositories;
 
 namespace NZWalks.Controllers;
 
@@ -8,11 +9,13 @@ namespace NZWalks.Controllers;
 [ApiController]
 public class AuthController : ControllerBase
 {
+    private readonly ITokenRepository _tokenRepository;
     private readonly UserManager<IdentityUser> _userManager;
 
-    public AuthController(UserManager<IdentityUser> userManager)
+    public AuthController(UserManager<IdentityUser> userManager, ITokenRepository tokenRepository)
     {
         _userManager = userManager;
+        _tokenRepository = tokenRepository;
     }
 
     //POST: https://localhost:7103/api/auth/Register
@@ -44,7 +47,21 @@ public class AuthController : ControllerBase
     {
         var identityUser = await _userManager.FindByEmailAsync(loginRequestDto.Username);
         if (identityUser != null && await _userManager.CheckPasswordAsync(identityUser, loginRequestDto.Password))
-            return Ok("User logged in successfully!");
+        {
+            //get roles for this user
+            var roles = await _userManager.GetRolesAsync(identityUser);
+            if (roles != null)
+            {
+                //create JWT token
+                var jwtToken = _tokenRepository.CreateJWTToken(identityUser, roles.ToList());
+                var response = new LoginResponseDto()
+                {
+                    JwtToken = jwtToken
+                };
+                return Ok(response);
+            }
+        }
+
 
         return BadRequest("Invalid login attempt");
     }
