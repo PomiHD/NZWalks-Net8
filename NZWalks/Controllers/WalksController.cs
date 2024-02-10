@@ -37,7 +37,7 @@ public class WalksController : ControllerBase
     }
 
     //Get ALL Walks
-    //GET: https://localhost:7103/api/walks?filterOn=Name&filterQuery=Track
+    //GET: https://localhost:7103/api/walks?filterOn=Name&filterQuery=Track&sortBy=Name&isAscending=true
     [HttpGet]
     public async Task<IActionResult> GetAll([FromQuery] string? filterOn,
         [FromQuery] string? filterQuery,
