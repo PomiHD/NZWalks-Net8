@@ -17,6 +17,9 @@ builder.Services.AddSwaggerGen();
 //add db context
 builder.Services.AddDbContext<NzWalksDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksConnectionString")));
+builder.Services.AddDbContext<NZWalksAuthDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksAuthConnectionString")));
+
 //add difficulty repository
 builder.Services.AddScoped<IRegionRepository, SqlRegionRepository>();
 //add walk repository
