@@ -8,10 +8,9 @@ using NZWalks.Models.Repositories;
 
 namespace NZWalks.Controllers;
 
-//https:localhost:7103/api/regions
+//https:localhost:7103/api/Regions
 [Route("api/[controller]")]
 [ApiController]
-[Authorize]
 public class RegionsController : ControllerBase
 {
     private readonly IMapper _mapper;
@@ -26,8 +25,9 @@ public class RegionsController : ControllerBase
     }
 
     //Get all regions
-    // Get: https://localhost:7103/api/regions
+    // Get: https://localhost:7103/api/Regions
     [HttpGet]
+    [Authorize(Roles = "Reader, Writer")]
     public async Task<IActionResult> GetAll()
     {
         // Get all regions from the database - Domain Model
@@ -40,9 +40,10 @@ public class RegionsController : ControllerBase
     }
 
     //Get region by Id
-    // Get: https://localhost:7103/api/regions/{id}
+    // Get: https://localhost:7103/api/Regions/{id}
     [HttpGet]
     [Route("{id:guid}")]
+    [Authorize(Roles = "Reader, Writer")]
     public async Task<IActionResult> GetById([FromRoute] Guid id)
     {
         // Get Region Domain Model From Database
@@ -54,9 +55,10 @@ public class RegionsController : ControllerBase
     }
 
     //POST to create new region
-    //POST: https://localhost:7031/api/regions
+    //POST: https://localhost:7103/api/Regions
     [HttpPost]
     [ValidateModel]
+    [Authorize(Roles = "Writer")]
     public async Task<IActionResult> Create([FromBody] AddRegionRequestDto addRegionRequestDto)
     {
         //Map or convert DTO to Domain Model
@@ -72,10 +74,11 @@ public class RegionsController : ControllerBase
     }
 
     // Update region
-    // PUT: https://localhost/7031/api/regions/{id}
+    // PUT: https://localhost/7103/api/Regions/{id}
     [HttpPut]
     [Route("{id:guid}")]
     [ValidateModel]
+    [Authorize(Roles = "Writer")]
     public async Task<IActionResult> Update([FromRoute] Guid id,
         [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
     {
@@ -93,9 +96,10 @@ public class RegionsController : ControllerBase
     }
 
     // Delete region
-    // DELETE: https://localhost/7031/api/regions/{id}
+    // DELETE: https://localhost/7103/api/Regions/{id}
     [HttpDelete]
     [Route("{id:guid}")]
+    [Authorize(Roles = "Writer")]
     public async Task<IActionResult> Delete([FromRoute] Guid id)
     {
         var regionDomainModel = await _regionRepository.DeleteAsync(id);
