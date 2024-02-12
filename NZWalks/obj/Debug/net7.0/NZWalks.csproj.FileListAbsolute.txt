@@ -524,3 +524,6 @@ C:\dev\NZWalks.API-Net7\NZWalks\obj\Debug\net7.0\refint\NZWalks.dll
 C:\dev\NZWalks.API-Net7\NZWalks\obj\Debug\net7.0\NZWalks.pdb
 C:\dev\NZWalks.API-Net7\NZWalks\obj\Debug\net7.0\NZWalks.genruntimeconfig.cache
 C:\dev\NZWalks.API-Net7\NZWalks\obj\Debug\net7.0\ref\NZWalks.dll
+C:\dev\NZWalks.API-Net7\NZWalks\bin\Debug\net7.0\Postmark.dll
+C:\dev\NZWalks.API-Net7\NZWalks\bin\Debug\net7.0\SendGrid.dll
+C:\dev\NZWalks.API-Net7\NZWalks\bin\Debug\net7.0\StarkbankEcdsa.dll

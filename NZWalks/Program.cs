@@ -2,11 +2,14 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NZWalks.Data;
 using NZWalks.Mappings;
+using NZWalks.Models.DTO;
 using NZWalks.Models.Repositories;
+using PostmarkDotNet;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +22,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     //add swagger doc for v1 of the API 
-    options.SwaggerDoc( "v1", new() { Title = "NZWalks API", Version = "v1" });
+    options.SwaggerDoc("v1", new() { Title = "NZWalks API", Version = "v1" });
     //add security definition to swagger doc for jwt bearer authentication scheme 
     options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
     {
@@ -29,7 +32,7 @@ builder.Services.AddSwaggerGen(options =>
         Scheme = JwtBearerDefaults.AuthenticationScheme,
     });
     //add security requirement to operations in swagger doc that require authentication and authorization
-    options.AddSecurityRequirement( new OpenApiSecurityRequirement
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
             new OpenApiSecurityScheme
@@ -78,6 +81,10 @@ builder.Services.Configure<IdentityOptions>(options =>
         options.Password.RequiredUniqueChars = 1;
     }
 );
+builder.Services.Configure<PostmarkSettings>(builder.Configuration.GetSection("Postmark"));
+// Configure PostmarkClient with the server token from app settings
+builder.Services.AddTransient<PostmarkClient>(provider =>
+    new PostmarkClient(builder.Configuration["Postmark:ServerToken"]));
 
 //add authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
