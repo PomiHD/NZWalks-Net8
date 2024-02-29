@@ -12,6 +12,7 @@ namespace NZWalks.Controllers
         [HttpPost("Upload")]
         public async Task<IActionResult> Upload([FromForm] ImageUploadRequestDto request)
         {
+            ValidateFileUpload(request);
             if (ModelState.IsValid)
             {
                 // Validate file upload
@@ -25,12 +26,10 @@ namespace NZWalks.Controllers
             var fileExtension = Path.GetExtension(request.File.FileName);
             if (!allowedExtensions.Contains(fileExtension))
             {
-                throw new Exception("Invalid file type");
                 ModelState.AddModelError("file", "Invalid file type");
             }
             if (request.File.Length > 10485760)
             {
-                throw new Exception("File size too large");
                 ModelState.AddModelError(
                     "file",
                     "File size more than 10MB , Please upload a smaller file"
