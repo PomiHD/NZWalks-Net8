@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "liD88fMP8ZRc2fdryR6aSDy5UkrgCvvNFucgpWMlFIYcOrSdcXaJ4xK6l7KJyPwcbwoO6rbPX0+tiNFo5CypZQ==",
+  "dgSpecHash": "leay7fNUeyZ1v+JbmTRLupPM0sMXt0QaJOvtAKU9nUMMTQgF3JBMGxXLT9TGlNC4jgIsOgm/6U16BnP6WFj+vw==",
   "success": true,
-  "projectFilePath": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj",
+  "projectFilePath": "C:\\dev\\NZWalks-Net7\\NZWalks\\NZWalks.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\XPS\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\XPS\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

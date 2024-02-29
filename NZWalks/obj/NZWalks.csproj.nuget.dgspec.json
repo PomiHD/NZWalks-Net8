@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj": {}
+    "C:\\dev\\NZWalks-Net7\\NZWalks\\NZWalks.csproj": {}
   },
   "projects": {
-    "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj": {
+    "C:\\dev\\NZWalks-Net7\\NZWalks\\NZWalks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj",
+        "projectUniqueName": "C:\\dev\\NZWalks-Net7\\NZWalks\\NZWalks.csproj",
         "projectName": "NZWalks",
-        "projectPath": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj",
+        "projectPath": "C:\\dev\\NZWalks-Net7\\NZWalks\\NZWalks.csproj",
         "packagesPath": "C:\\Users\\XPS\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\obj\\",
+        "outputPath": "C:\\dev\\NZWalks-Net7\\NZWalks\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\XPS\\AppData\\Roaming\\NuGet\\NuGet.Config"
