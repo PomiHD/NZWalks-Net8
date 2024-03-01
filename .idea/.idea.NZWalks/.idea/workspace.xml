@@ -5,496 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c4dded9-288a-41b4-8986-05137416ceab" name="Changes" comment="72. New Controller and Action Method for Image Upload">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks.API/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks.API/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/NZWalks/FileContentIndex/51289bbb-9af7-4e4f-9455-3c8080263d5e.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/NZWalks/FileContentIndex/e1ac46e9-c3f9-4ce1-9ddf-f93ac00ad934.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/NZWalks/config/applicationhost.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/NZWalks/v17/.futdcache.v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/NZWalks/v17/.suo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/NZWalks/v17/DocumentLayout.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/nzwalks.metadata.v7.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/nzwalks.projects.v7.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/Controllers/ImagesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/Models/DTO/ImageUploadRequestDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/NZWalks.csproj.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Data.Sqlite.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Sqlite.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/SQLitePCLRaw.batteries_v2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/SQLitePCLRaw.core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/SQLitePCLRaw.provider.e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/alpine-arm/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/alpine-arm64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/alpine-x64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/browser-wasm/nativeassets/net7.0/e_sqlite3.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-arm/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-arm64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-armel/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-mips64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-musl-arm/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-musl-arm64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-musl-x64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-ppc64le/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-s390x/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-x64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/linux-x86/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/maccatalyst-x64/native/libe_sqlite3.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/osx-arm64/native/libe_sqlite3.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/osx-x64/native/libe_sqlite3.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/win-arm/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/win-arm64/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/win-x64/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/win-x86/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/.nupkg.metadata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/.signature.p7s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/Icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator.7.0.12.nupkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator.7.0.12.nupkg.sha512" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator.nuspec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/DotnetToolSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Humanizer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.CodeAnalysis.AnalyzerUtilities.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.CodeAnalysis.CSharp.Features.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.CodeAnalysis.CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.CodeAnalysis.Elfie.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.CodeAnalysis.Features.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.CodeAnalysis.Scripting.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.CodeAnalysis.Workspaces.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.CodeAnalysis.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.DiaSymReader.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.DotNet.Scaffolding.Shared.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.DotNet.Scaffolding.Shared.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Microsoft.DotNet.Scaffolding.Shared.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/Newtonsoft.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/NuGet.Common.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/NuGet.Configuration.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/NuGet.DependencyResolver.Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/NuGet.Frameworks.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/NuGet.LibraryModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/NuGet.Packaging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/NuGet.ProjectModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/NuGet.Protocol.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/NuGet.Versioning.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.Composition.AttributedModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.Composition.Convention.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.Composition.Hosting.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.Composition.Runtime.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.Composition.TypedParts.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.Configuration.ConfigurationManager.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.IO.Pipelines.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.Security.Cryptography.Pkcs.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/System.Security.Permissions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/af/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ar/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/az/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/bg/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/bn-BD/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/build/microsoft.visualstudio.web.codegeneration.tools.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/buildMultiTargeting/microsoft.visualstudio.web.codegeneration.tools.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/cs/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/cs/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/cs/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/cs/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/da/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/de/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/de/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/de/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/de/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/de/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/dotnet-aspnet-codegenerator.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/dotnet-aspnet-codegenerator.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/dotnet-aspnet-codegenerator.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/dotnet-aspnet-codegenerator.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/dotnet-aspnet-codegenerator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/el/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/es/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/es/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/es/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/es/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/es/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fa/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fi-FI/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fr-BE/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fr/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fr/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fr/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/fr/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/he/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/hr/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/hu/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/hy/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/id/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/is/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/it/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/it/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/it/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/it/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/it/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ja/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ja/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ja/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ja/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ko-KR/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ko/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ko/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ko/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ku/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/lv/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ms-MY/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/mt/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/nb-NO/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/nb/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/nl/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pl/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pl/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pl/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pl/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/pt/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ro/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ru/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ru/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ru/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/ru/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/runtimes/win/lib/netcoreapp3.0/System.Security.Cryptography.Pkcs.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/shims/win-x64/dotnet-aspnet-codegenerator.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/shims/win-x86/dotnet-aspnet-codegenerator.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/sk/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/sl/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/sr-Latn/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/sr/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/sv/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/th-TH/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/toolassets/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Msbuild.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/tr/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/tr/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/tr/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/tr/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/uk/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/uz-Cyrl-UZ/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/uz-Latn-UZ/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/vi/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-CN/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hans/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hant/Humanizer.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/dotnet-aspnet-codegenerator/7.0.12/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.12/restore.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/ApiEndpoints.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.BuildWithSkipAnalyzers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks.API/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks.API/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks.API/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks.API/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks.API/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks.API/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks.API/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/Models/Repositories/IImageRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/Models/Repositories/LocalImageRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks.API.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/Models/Domain/Image.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Models/Domain/Image.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/Controllers/ImagesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Controllers/ImagesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/Models/DTO/ImageUploadRequestDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Models/DTO/ImageUploadRequestDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/NZWalks.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/NZWalks.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.DotNet.Scaffolding.Shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.DotNet.Scaffolding.Shared.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/SendGrid.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/StarkbankEcdsa.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/dotnet-aspnet-codegenerator-design.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/dotnet-aspnet-codegenerator-design.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/.nupkg.metadata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator.7.0.11.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator.7.0.11.nupkg.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator.nuspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/DotnetToolSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Humanizer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.CodeAnalysis.AnalyzerUtilities.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.CodeAnalysis.CSharp.Features.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.CodeAnalysis.Elfie.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.CodeAnalysis.Features.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.CodeAnalysis.Scripting.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.CodeAnalysis.Workspaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.CodeAnalysis.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.DiaSymReader.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.DotNet.Scaffolding.Shared.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.DotNet.Scaffolding.Shared.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Microsoft.DotNet.Scaffolding.Shared.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/NuGet.Common.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/NuGet.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/NuGet.DependencyResolver.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/NuGet.Frameworks.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/NuGet.LibraryModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/NuGet.Packaging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/NuGet.ProjectModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/NuGet.Protocol.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/NuGet.Versioning.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.Composition.AttributedModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.Composition.Convention.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.Composition.Hosting.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.Composition.Runtime.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.Composition.TypedParts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.Configuration.ConfigurationManager.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.IO.Pipelines.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.Security.Cryptography.Pkcs.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/System.Security.Permissions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/af/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ar/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/az/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/bg/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/bn-BD/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/build/microsoft.visualstudio.web.codegeneration.tools.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/buildMultiTargeting/microsoft.visualstudio.web.codegeneration.tools.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/cs/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/cs/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/cs/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/cs/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/da/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/de/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/de/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/de/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/de/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/de/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/dotnet-aspnet-codegenerator.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/dotnet-aspnet-codegenerator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/dotnet-aspnet-codegenerator.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/dotnet-aspnet-codegenerator.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/dotnet-aspnet-codegenerator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/el/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/es/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/es/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/es/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/es/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/es/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fa/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fi-FI/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fr-BE/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fr/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fr/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fr/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/fr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/he/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/hr/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/hu/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/hy/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/id/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/is/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/it/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/it/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/it/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/it/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/it/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ja/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ja/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ja/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ja/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ko-KR/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ko/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ko/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ko/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ku/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/lv/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ms-MY/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/mt/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/nb-NO/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/nb/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/nl/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pl/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pl/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pl/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pl/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pt-BR/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/pt/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ro/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ru/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ru/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ru/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/ru/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/runtimes/win/lib/netcoreapp3.0/System.Security.Cryptography.Pkcs.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/shims/win-x64/dotnet-aspnet-codegenerator.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/shims/win-x86/dotnet-aspnet-codegenerator.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/sk/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/sl/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/sr-Latn/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/sr/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/sv/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/th-TH/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/toolassets/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Msbuild.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/tr/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/tr/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/tr/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/tr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/uk/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/uz-Cyrl-UZ/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/uz-Latn-UZ/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/vi/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-CN/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hans/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hans/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hant/Humanizer.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/dotnet-aspnet-codegenerator/7.0.11/tools/net7.0/any/zh-Hant/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/.store/dotnet-aspnet-codegenerator/7.0.11/restore.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/ref/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/ref/NZWalks.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/refint/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/refint/NZWalks.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/dotnet-aspnet-codegenerator.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/dotnet-aspnet-codegenerator.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -511,6 +35,18 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2efb00b8e86e48b08299dc3d6bb5d4de548a0/86/d8a2a930/ApiControllerAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6463e87c04a84c23b395d0876ca66bb697870/9b/824e369b/TlsCipherSuite.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Controllers/RegionsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Controllers/RegionsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Controllers/RegionsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Controllers/RegionsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Controllers/RegionsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Controllers/RegionsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Controllers/WalksController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Controllers/WalksController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Models/DTO/AddRegionRequestDto.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Models/DTO/AddRegionRequestDto.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Models/DTO/AddWalkRequestDto.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/NZWalks.API-Net7/NZWalks/Models/DTO/AddWalkRequestDto.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -521,7 +57,7 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2d38XHgPnNKU2KrX1WGw0a6i347" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -531,6 +67,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.NZWalks: http.executor": "Run",
+    ".NET Launch Settings Profile.NZWalks: https.executor": "Run",
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -619,6 +156,7 @@
       <workItem from="1709241176396" duration="2751000" />
       <workItem from="1709244282070" duration="44000" />
       <workItem from="1709244552916" duration="4432000" />
+      <workItem from="1709254449299" duration="4953000" />
     </task>
     <task id="LOCAL-00001" summary="72. New Controller and Action Method for Image Upload">
       <option name="closed" value="true" />

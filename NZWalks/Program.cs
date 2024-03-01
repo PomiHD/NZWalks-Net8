@@ -16,88 +16,114 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+//add http context accessor to services collection to allow access to http context in controllers
+builder.Services.AddHttpContextAccessor();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(options =>
 {
-    //add swagger doc for v1 of the API 
+    //add swagger doc for v1 of the API
     options.SwaggerDoc("v1", new() { Title = "NZWalks API", Version = "v1" });
-    //add security definition to swagger doc for jwt bearer authentication scheme 
-    options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
-    {
-        Name = "Authorization",
-        In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey,
-        Scheme = JwtBearerDefaults.AuthenticationScheme,
-    });
-    //add security requirement to operations in swagger doc that require authentication and authorization
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
+    //add security definition to swagger doc for jwt bearer authentication scheme
+    options.AddSecurityDefinition(
+        JwtBearerDefaults.AuthenticationScheme,
+        new OpenApiSecurityScheme
         {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = JwtBearerDefaults.AuthenticationScheme
-                },
-                Scheme = "oauth2",
-                Name = JwtBearerDefaults.AuthenticationScheme,
-                In = ParameterLocation.Header
-            },
-            new List<string>()
+            Name = "Authorization",
+            In = ParameterLocation.Header,
+            Type = SecuritySchemeType.ApiKey,
+            Scheme = JwtBearerDefaults.AuthenticationScheme,
         }
-    });
+    );
+    //add security requirement to operations in swagger doc that require authentication and authorization
+    options.AddSecurityRequirement(
+        new OpenApiSecurityRequirement
+        {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = JwtBearerDefaults.AuthenticationScheme
+                    },
+                    Scheme = "oauth2",
+                    Name = JwtBearerDefaults.AuthenticationScheme,
+                    In = ParameterLocation.Header
+                },
+                new List<string>()
+            }
+        }
+    );
 });
+
 //add db context
 builder.Services.AddDbContext<NzWalksDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksConnectionString")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksConnectionString"))
+);
 builder.Services.AddDbContext<NZWalksAuthDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksAuthConnectionString")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksAuthConnectionString"))
+);
 
 //add difficulty repository
 builder.Services.AddScoped<IRegionRepository, SqlRegionRepository>();
+
 //add walk repository
 builder.Services.AddScoped<IWalkRepository, SqlWalkRepository>();
+
 //add token repository
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
+
+//add image repository
+builder.Services.AddScoped<IImageRepository, LocalImageRepository>();
+
 //add automapper
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
+
 //add Identity services
-builder.Services.AddIdentityCore<IdentityUser>()
+builder
+    .Services.AddIdentityCore<IdentityUser>()
     .AddRoles<IdentityRole>()
     .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("NZWalks")
     .AddEntityFrameworkStores<NZWalksAuthDbContext>()
     .AddDefaultTokenProviders();
 
 builder.Services.Configure<IdentityOptions>(options =>
-    {
-        options.Password.RequireDigit = false;
-        options.Password.RequireLowercase = false;
-        options.Password.RequireNonAlphanumeric = false;
-        options.Password.RequireUppercase = false;
-        options.Password.RequiredLength = 6;
-        options.Password.RequiredUniqueChars = 1;
-    }
-);
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+});
 builder.Services.Configure<PostmarkSettings>(builder.Configuration.GetSection("Postmark"));
+
 // Configure PostmarkClient with the server token from app settings
-builder.Services.AddTransient<PostmarkClient>(provider =>
-    new PostmarkClient(builder.Configuration["Postmark:ServerToken"]));
+builder.Services.AddTransient<PostmarkClient>(provider => new PostmarkClient(
+    builder.Configuration["Postmark:ServerToken"]
+));
 
 //add authentication
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-        ValidAudience = builder.Configuration["Jwt:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-    });
+builder
+    .Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])
+            )
+        }
+    );
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -108,8 +134,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 //add authentication middleware to the pipeline
 app.UseAuthentication();
+
 //add authorization middleware to the pipeline
 app.UseAuthorization();
 
