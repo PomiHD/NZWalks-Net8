@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c4dded9-288a-41b4-8986-05137416ceab" name="Changes" comment="72. New Controller and Action Method for Image Upload">
-      <change afterPath="$PROJECT_DIR$/NZWalks/Models/Repositories/IImageRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/Models/Repositories/LocalImageRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/Controllers/ImagesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Controllers/ImagesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/Models/DTO/ImageUploadRequestDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Models/DTO/ImageUploadRequestDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/NZWalks.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/NZWalks.csproj" afterDir="false" />
+    <list default="true" id="9c4dded9-288a-41b4-8986-05137416ceab" name="Changes" comment="73. Image Upload Repository Implementaion">
       <change beforePath="$PROJECT_DIR$/NZWalks/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/ref/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/ref/NZWalks.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/refint/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/refint/NZWalks.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +142,7 @@
       <workItem from="1709241176396" duration="2751000" />
       <workItem from="1709244282070" duration="44000" />
       <workItem from="1709244552916" duration="4432000" />
-      <workItem from="1709254449299" duration="4953000" />
+      <workItem from="1709254449299" duration="5820000" />
     </task>
     <task id="LOCAL-00001" summary="72. New Controller and Action Method for Image Upload">
       <option name="closed" value="true" />
@@ -166,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709248977449</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="73. Image Upload Repository Implementaion">
+      <option name="closed" value="true" />
+      <created>1709259888877</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709259888877</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +181,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="72. New Controller and Action Method for Image Upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="72. New Controller and Action Method for Image Upload" />
+    <MESSAGE value="73. Image Upload Repository Implementaion" />
+    <option name="LAST_COMMIT_MESSAGE" value="73. Image Upload Repository Implementaion" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
