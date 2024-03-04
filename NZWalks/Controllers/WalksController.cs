@@ -1,3 +1,4 @@
+using System.Net;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using NZWalks.CustomActionFilters;
@@ -39,20 +40,25 @@ public class WalksController : ControllerBase
     //Get ALL Walks
     //GET: https://localhost:7103/api/walks?filterOn=Name&filterQuery=Track&sortBy=Name&isAscending=true&pageNumber=1&pageSize=5
     [HttpGet]
-    public async Task<IActionResult> GetAll([FromQuery] string? filterOn,
+    public async Task<IActionResult> GetAll(
+        [FromQuery] string? filterOn,
         [FromQuery] string? filterQuery,
         [FromQuery] string? sortBy,
         [FromQuery] bool? isAscending,
         [FromQuery] int pageNumber,
-        [FromQuery] int pageSize)
+        [FromQuery] int pageSize
+    )
     {
-        var walksDomainModel =
-            await _walkRepository.GetAllAsync(filterOn,
-                filterQuery,
-                sortBy,
-                isAscending ?? true,
-                pageNumber,
-                pageSize);
+        var walksDomainModel = await _walkRepository.GetAllAsync(
+            filterOn,
+            filterQuery,
+            sortBy,
+            isAscending ?? true,
+            pageNumber,
+            pageSize
+        );
+        // simulate that an error happen
+        throw new Exception("This is a an Error");
 
         //Map Domain Model to DTO
         return Ok(_mapper.Map<List<WalkDto>>(walksDomainModel));
@@ -65,7 +71,8 @@ public class WalksController : ControllerBase
     public async Task<IActionResult> GetById([FromRoute] Guid id)
     {
         var walkDomainModel = await _walkRepository.GetByIdAsync(id);
-        if (walkDomainModel == null) return NotFound();
+        if (walkDomainModel == null)
+            return NotFound();
 
         //Map Domain Model to DTO
         return Ok(_mapper.Map<WalkDto>(walkDomainModel));
@@ -76,13 +83,17 @@ public class WalksController : ControllerBase
     [HttpPut]
     [Route("{id:guid}")]
     [ValidateModel]
-    public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateWalkRequestDto updateWalkRequestDto)
+    public async Task<IActionResult> Update(
+        [FromRoute] Guid id,
+        [FromBody] UpdateWalkRequestDto updateWalkRequestDto
+    )
     {
         // Map DTO to Domain Model
         var walkDomainModel = _mapper.Map<Walk>(updateWalkRequestDto);
 
         var updatedWalk = await _walkRepository.UpdateAsync(id, walkDomainModel);
-        if (updatedWalk == null) return NotFound();
+        if (updatedWalk == null)
+            return NotFound();
 
         // Map Domain Model to DTO
         return Ok(_mapper.Map<WalkDto>(updatedWalk));
@@ -95,7 +106,8 @@ public class WalksController : ControllerBase
     public async Task<IActionResult> Delete([FromRoute] Guid id)
     {
         var deletedWalkDomainModel = await _walkRepository.DeleteAsync(id);
-        if (deletedWalkDomainModel == null) return NotFound();
+        if (deletedWalkDomainModel == null)
+            return NotFound();
 
         // Map Domain Model to DTO
         return Ok(_mapper.Map<WalkDto>(deletedWalkDomainModel));
