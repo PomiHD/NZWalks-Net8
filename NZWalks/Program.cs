@@ -11,11 +11,16 @@ using NZWalks.Mappings;
 using NZWalks.Models.DTO;
 using NZWalks.Models.Repositories;
 using PostmarkDotNet;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var logger = new LoggerConfiguration().WriteTo.Console().MinimumLevel.Warning().CreateLogger();
 
+//clear default logging providers and add serilog
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
 builder.Services.AddControllers();
 
 //add http context accessor to services collection to allow access to http context in controllers
@@ -143,13 +148,15 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 // add static files middleware to the pipeline
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-        Path.Combine(app.Environment.ContentRootPath, "Images")
-    ),
-    RequestPath = "/Images"
-});
+app.UseStaticFiles(
+    new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(
+            Path.Combine(app.Environment.ContentRootPath, "Images")
+        ),
+        RequestPath = "/Images"
+    }
+);
 
 app.MapControllers();
 

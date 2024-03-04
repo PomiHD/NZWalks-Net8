@@ -1,3 +1,4 @@
+using System.Text.Json;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,29 +15,49 @@ namespace NZWalks.Controllers;
 public class RegionsController : ControllerBase
 {
     private readonly IMapper _mapper;
+    private readonly ILogger<RegionsController> _logger;
     private readonly IRegionRepository _regionRepository;
 
-
-    public RegionsController(IRegionRepository regionRepository,
-        IMapper mapper)
+    public RegionsController(
+        IRegionRepository regionRepository,
+        IMapper mapper,
+        ILogger<RegionsController> logger
+    )
     {
         _regionRepository = regionRepository;
         _mapper = mapper;
+        _logger = logger;
     }
 
     //Get all regions
     // Get: https://localhost:7103/api/Regions
     [HttpGet]
-    [Authorize(Roles = "Reader, Writer")]
+    // [Authorize(Roles = "Reader, Writer")]
     public async Task<IActionResult> GetAll()
     {
-        // Get all regions from the database - Domain Model
-        var regionsDomain = await _regionRepository.GetAllAsync();
+        try
+        {
+            throw new Exception("This is an custom exception");
+            // _logger.LogInformation("Getting all regions");
+            // _logger.LogWarning("This is a warning");
+            // _logger.LogError("This is an error");
 
-        //Map Domain Model to DTO
-        var regionsDto = _mapper.Map<List<RegionDto>>(regionsDomain);
-        //Return DTO
-        return Ok(regionsDto);
+            // Get all regions from the database - Domain Model
+            var regionsDomain = await _regionRepository.GetAllAsync();
+
+            //Map Domain Model to DTO
+            var regionsDto = _mapper.Map<List<RegionDto>>(regionsDomain);
+            //Return DTO
+            _logger.LogInformation(
+                $"Returning all regions: {JsonSerializer.Serialize(regionsDomain)}"
+            );
+            return Ok(regionsDto);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, e.Message);
+            throw;
+        }
     }
 
     //Get region by Id
@@ -49,7 +70,8 @@ public class RegionsController : ControllerBase
         // Get Region Domain Model From Database
         var regionDomain = await _regionRepository.GetByIdAsync(id);
         // Check if region is null before accessing its properties
-        if (regionDomain == null) return NotFound();
+        if (regionDomain == null)
+            return NotFound();
 
         return Ok(_mapper.Map<RegionDto>(regionDomain));
     }
@@ -79,17 +101,20 @@ public class RegionsController : ControllerBase
     [Route("{id:guid}")]
     [ValidateModel]
     [Authorize(Roles = "Writer")]
-    public async Task<IActionResult> Update([FromRoute] Guid id,
-        [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
+    public async Task<IActionResult> Update(
+        [FromRoute] Guid id,
+        [FromBody] UpdateRegionRequestDto updateRegionRequestDto
+    )
     {
         //Map DTO to Domain Model
         var regionDomainModel = _mapper.Map<Region>(updateRegionRequestDto);
 
         // Check if region exist
         regionDomainModel = await _regionRepository.UpdateAsync(id, regionDomainModel);
-        if (regionDomainModel == null) return NotFound();
+        if (regionDomainModel == null)
+            return NotFound();
 
-        //Convert Domain Model to DTO 
+        //Convert Domain Model to DTO
         var regionDto = _mapper.Map<RegionDto>(regionDomainModel);
 
         return Ok(regionDto);
@@ -103,7 +128,8 @@ public class RegionsController : ControllerBase
     public async Task<IActionResult> Delete([FromRoute] Guid id)
     {
         var regionDomainModel = await _regionRepository.DeleteAsync(id);
-        if (regionDomainModel == null) return NotFound();
+        if (regionDomainModel == null)
+            return NotFound();
 
         //Return the deleted region
         //Map Domain Model to DTO

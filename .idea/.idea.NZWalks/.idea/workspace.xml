@@ -4,8 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c4dded9-288a-41b4-8986-05137416ceab" name="Changes" comment="73. Image Upload Repository Implementaion">
+    <list default="true" id="9c4dded9-288a-41b4-8986-05137416ceab" name="Changes" comment="74. Serving Static Files Through ASPNET Core Web API">
+      <change afterPath="$PROJECT_DIR$/NZWalks/Images/sad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Binder.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Diagnostics.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.FileProviders.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Hosting.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Logging.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.AspNetCore.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Extensions.Hosting.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Extensions.Logging.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Formatting.Compact.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Settings.Configuration.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Sinks.Console.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Sinks.Debug.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Sinks.File.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/System.Diagnostics.DiagnosticSource.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/System.Text.Encodings.Web.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/System.Text.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/Controllers/RegionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Controllers/RegionsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/NZWalks.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/NZWalks.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Options.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Options.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/ref/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/ref/NZWalks.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/refint/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/refint/NZWalks.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NZWalks/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,32 +97,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.NZWalks: http.executor": "Run",
-    ".NET Launch Settings Profile.NZWalks: https.executor": "Run",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\XPS\\AppData\\Roaming\\npm\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.NZWalks: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.NZWalks: https.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\XPS\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\XPS\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\XPS\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\XPS\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\XPS\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\XPS\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\XPS\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.NZWalks: http">
     <configuration name="NZWalks: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/NZWalks/NZWalks.csproj" />
@@ -143,6 +190,7 @@
       <workItem from="1709244282070" duration="44000" />
       <workItem from="1709244552916" duration="4432000" />
       <workItem from="1709254449299" duration="5820000" />
+      <workItem from="1709513341047" duration="3369000" />
     </task>
     <task id="LOCAL-00001" summary="72. New Controller and Action Method for Image Upload">
       <option name="closed" value="true" />
