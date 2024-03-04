@@ -4,55 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c4dded9-288a-41b4-8986-05137416ceab" name="Changes" comment="74. Serving Static Files Through ASPNET Core Web API">
-      <change afterPath="$PROJECT_DIR$/NZWalks/Images/sad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Binder.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Diagnostics.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.FileProviders.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Hosting.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.AspNetCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Extensions.Hosting.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Extensions.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Formatting.Compact.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Settings.Configuration.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Sinks.Console.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Sinks.Debug.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.Sinks.File.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Serilog.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/System.Diagnostics.DiagnosticSource.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/System.Text.Encodings.Web.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/System.Text.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll" afterDir="false" />
+    <list default="true" id="9c4dded9-288a-41b4-8986-05137416ceab" name="Changes" comment="76. Add Logging to Console in ASP.NET Core Web API">
+      <change afterPath="$PROJECT_DIR$/NZWalks/Logs/NzWalks_Log202403041239.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NZWalks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/Controllers/RegionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Controllers/RegionsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/NZWalks.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/NZWalks.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Options.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/Microsoft.Extensions.Options.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/bin/Debug/net7.0/NZWalks.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/NZWalks.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/ref/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/ref/NZWalks.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/refint/NZWalks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/Debug/net7.0/refint/NZWalks.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/NZWalks.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZWalks/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/NZWalks/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +83,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.NZWalks: http">
+  <component name="RunManager" selected=".NET Launch Settings Profile.NZWalks: https">
     <configuration name="NZWalks: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/NZWalks/NZWalks.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -191,6 +151,7 @@
       <workItem from="1709244552916" duration="4432000" />
       <workItem from="1709254449299" duration="5820000" />
       <workItem from="1709513341047" duration="3369000" />
+      <workItem from="1709517398341" duration="2876000" />
     </task>
     <task id="LOCAL-00001" summary="72. New Controller and Action Method for Image Upload">
       <option name="closed" value="true" />
@@ -208,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709259888877</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="76. Add Logging to Console in ASP.NET Core Web API">
+      <option name="closed" value="true" />
+      <created>1709518196646</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709518196646</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +199,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="72. New Controller and Action Method for Image Upload" />
     <MESSAGE value="73. Image Upload Repository Implementaion" />
-    <option name="LAST_COMMIT_MESSAGE" value="73. Image Upload Repository Implementaion" />
+    <MESSAGE value="76. Add Logging to Console in ASP.NET Core Web API" />
+    <option name="LAST_COMMIT_MESSAGE" value="76. Add Logging to Console in ASP.NET Core Web API" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

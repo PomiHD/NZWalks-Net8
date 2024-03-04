@@ -16,7 +16,11 @@ using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var logger = new LoggerConfiguration().WriteTo.Console().MinimumLevel.Warning().CreateLogger();
+var logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/NzWalks_Log.txt", rollingInterval: RollingInterval.Minute)
+    .MinimumLevel.Warning()
+    .CreateLogger();
 
 //clear default logging providers and add serilog
 builder.Logging.ClearProviders();
