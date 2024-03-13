@@ -1,5 +1,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using NZWalks.CustomActionFilters;
 using NZWalks.Models.Domain;
@@ -11,14 +12,13 @@ namespace NZWalks.Controllers;
 //https:localhost:7103/api/Regions
 [Route("api/[controller]")]
 [ApiController]
+[EnableCors("AllowSpecificOrigin")]
 public class RegionsController : ControllerBase
 {
     private readonly IMapper _mapper;
     private readonly IRegionRepository _regionRepository;
 
-
-    public RegionsController(IRegionRepository regionRepository,
-        IMapper mapper)
+    public RegionsController(IRegionRepository regionRepository, IMapper mapper)
     {
         _regionRepository = regionRepository;
         _mapper = mapper;
@@ -49,7 +49,8 @@ public class RegionsController : ControllerBase
         // Get Region Domain Model From Database
         var regionDomain = await _regionRepository.GetByIdAsync(id);
         // Check if region is null before accessing its properties
-        if (regionDomain == null) return NotFound();
+        if (regionDomain == null)
+            return NotFound();
 
         return Ok(_mapper.Map<RegionDto>(regionDomain));
     }
@@ -79,17 +80,20 @@ public class RegionsController : ControllerBase
     [Route("{id:guid}")]
     [ValidateModel]
     // [Authorize(Roles = "Writer")]
-    public async Task<IActionResult> Update([FromRoute] Guid id,
-        [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
+    public async Task<IActionResult> Update(
+        [FromRoute] Guid id,
+        [FromBody] UpdateRegionRequestDto updateRegionRequestDto
+    )
     {
         //Map DTO to Domain Model
         var regionDomainModel = _mapper.Map<Region>(updateRegionRequestDto);
 
         // Check if region exist
         regionDomainModel = await _regionRepository.UpdateAsync(id, regionDomainModel);
-        if (regionDomainModel == null) return NotFound();
+        if (regionDomainModel == null)
+            return NotFound();
 
-        //Convert Domain Model to DTO 
+        //Convert Domain Model to DTO
         var regionDto = _mapper.Map<RegionDto>(regionDomainModel);
 
         return Ok(regionDto);
@@ -103,7 +107,8 @@ public class RegionsController : ControllerBase
     public async Task<IActionResult> Delete([FromRoute] Guid id)
     {
         var regionDomainModel = await _regionRepository.DeleteAsync(id);
-        if (regionDomainModel == null) return NotFound();
+        if (regionDomainModel == null)
+            return NotFound();
 
         //Return the deleted region
         //Map Domain Model to DTO

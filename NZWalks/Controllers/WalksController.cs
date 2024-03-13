@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using NZWalks.CustomActionFilters;
 using NZWalks.Models.Domain;
@@ -10,6 +11,7 @@ namespace NZWalks.Controllers;
 // https://localhost:7103/api/walks
 [Route("api/[controller]")]
 [ApiController]
+[EnableCors("AllowSpecificOrigin")]
 public class WalksController : ControllerBase
 {
     private readonly IMapper _mapper;

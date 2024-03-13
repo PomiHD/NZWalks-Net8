@@ -125,6 +125,21 @@ builder
             )
         }
     );
+
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(
+        "AllowSpecificOrigin",
+        policy =>
+        {
+            policy
+                .WithOrigins("http://localhost:5173") // The origin of the client app
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        }
+    );
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -134,6 +149,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Use CORS policy
+app.UseCors("AllowSpecificOrigin");
 app.UseHttpsRedirection();
 
 //add authentication middleware to the pipeline
@@ -143,13 +160,15 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 // add static files middleware to the pipeline
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-        Path.Combine(app.Environment.ContentRootPath, "Images")
-    ),
-    RequestPath = "/Images"
-});
+app.UseStaticFiles(
+    new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(
+            Path.Combine(app.Environment.ContentRootPath, "Images")
+        ),
+        RequestPath = "/Images"
+    }
+);
 
 app.MapControllers();
 
