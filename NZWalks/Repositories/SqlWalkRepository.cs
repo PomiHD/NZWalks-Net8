@@ -2,7 +2,7 @@
 using NZWalks.Data;
 using NZWalks.Models.Domain;
 
-namespace NZWalks.Models.Repositories;
+namespace NZWalks.Repositories;
 
 public class SqlWalkRepository : IWalkRepository
 {
@@ -20,17 +20,16 @@ public class SqlWalkRepository : IWalkRepository
         return walk;
     }
 
-    public async Task<List<Walk>> GetAllAsync(string? filterOn = null,
+    public async Task<List<Walk>> GetAllAsync(
+        string? filterOn = null,
         string? filterQuery = null,
         string? sortBy = null,
         bool isAscending = true,
         int pageNumber = 1,
-        int pageSize = 1000)
+        int pageSize = 1000
+    )
     {
-        var walks = _dbContext.Walks
-            .Include("Difficulty")
-            .Include("Region")
-            .AsQueryable();
+        var walks = _dbContext.Walks.Include("Difficulty").Include("Region").AsQueryable();
 
         //Filtering
         if (!string.IsNullOrWhiteSpace(filterOn) && !string.IsNullOrWhiteSpace(filterQuery))
@@ -45,14 +44,22 @@ public class SqlWalkRepository : IWalkRepository
         if (!string.IsNullOrWhiteSpace(sortBy))
             walks = sortBy.ToLower() switch
             {
-                "name" => isAscending ? walks.OrderBy(w => w.Name) : walks.OrderByDescending(w => w.Name),
-                "region" => isAscending
-                    ? walks.OrderBy(w => w.Region.Name)
-                    : walks.OrderByDescending(w => w.Region.Name),
-                "difficulty" => isAscending
-                    ? walks.OrderBy(w => w.Difficulty.Name)
-                    : walks.OrderByDescending(w => w.Difficulty.Name),
-                "length" => isAscending ? walks.OrderBy(w => w.LengthKm) : walks.OrderByDescending(w => w.LengthKm),
+                "name"
+                    => isAscending
+                        ? walks.OrderBy(w => w.Name)
+                        : walks.OrderByDescending(w => w.Name),
+                "region"
+                    => isAscending
+                        ? walks.OrderBy(w => w.Region.Name)
+                        : walks.OrderByDescending(w => w.Region.Name),
+                "difficulty"
+                    => isAscending
+                        ? walks.OrderBy(w => w.Difficulty.Name)
+                        : walks.OrderByDescending(w => w.Difficulty.Name),
+                "length"
+                    => isAscending
+                        ? walks.OrderBy(w => w.LengthKm)
+                        : walks.OrderByDescending(w => w.LengthKm),
                 _ => walks
             };
         //Paging
@@ -63,8 +70,8 @@ public class SqlWalkRepository : IWalkRepository
 
     public async Task<Walk?> GetByIdAsync(Guid id)
     {
-        return await _dbContext.Walks
-            .Include("Difficulty")
+        return await _dbContext
+            .Walks.Include("Difficulty")
             .Include("Region")
             .FirstOrDefaultAsync(w => w.Id == id);
     }
@@ -72,7 +79,8 @@ public class SqlWalkRepository : IWalkRepository
     public async Task<Walk?> UpdateAsync(Guid id, Walk walk)
     {
         var existingWalk = await _dbContext.Walks.FirstOrDefaultAsync(w => w.Id == id);
-        if (existingWalk == null) return null;
+        if (existingWalk == null)
+            return null;
 
         existingWalk.Name = walk.Name;
         existingWalk.Description = walk.Description;
@@ -88,7 +96,8 @@ public class SqlWalkRepository : IWalkRepository
     public async Task<Walk?> DeleteAsync(Guid id)
     {
         var existingWalk = await _dbContext.Walks.FirstOrDefaultAsync(x => x.Id == id);
-        if (existingWalk == null) return null;
+        if (existingWalk == null)
+            return null;
         _dbContext.Walks.Remove(existingWalk);
         await _dbContext.SaveChangesAsync();
 

@@ -1,7 +1,7 @@
 ﻿using NZWalks.Data;
 using NZWalks.Models.Domain;
 
-namespace NZWalks.Models.Repositories;
+namespace NZWalks.Repositories;
 
 public class LocalImageRepository : IImageRepository
 {

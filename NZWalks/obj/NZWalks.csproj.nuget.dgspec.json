@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj",
         "projectName": "NZWalks",
         "projectPath": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj",
-        "packagesPath": "C:\\Users\\XPS\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\wsgdd\\.nuget\\packages\\",
         "outputPath": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\XPS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wsgdd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,7 +130,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
         }
       }
     }

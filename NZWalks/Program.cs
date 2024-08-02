@@ -10,7 +10,7 @@ using NZWalks.Data;
 using NZWalks.Mappings;
 using NZWalks.Middlewares;
 using NZWalks.Models.DTO;
-using NZWalks.Models.Repositories;
+using NZWalks.Repositories;
 using PostmarkDotNet;
 using Serilog;
 

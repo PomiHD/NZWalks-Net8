@@ -2,7 +2,7 @@
 using NZWalks.Data;
 using NZWalks.Models.Domain;
 
-namespace NZWalks.Models.Repositories;
+namespace NZWalks.Repositories;
 
 /**
  * This class is used to get the region data from the database
@@ -11,10 +11,8 @@ namespace NZWalks.Models.Repositories;
  * It returns a list of regions
  */
 public class SqlRegionRepository : IRegionRepository
-
 {
     private readonly NzWalksDbContext _dbContext;
-
 
     public SqlRegionRepository(NzWalksDbContext dbContext)
     {
@@ -43,7 +41,8 @@ public class SqlRegionRepository : IRegionRepository
     {
         var existingRegion = await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
 
-        if (existingRegion == null) return null;
+        if (existingRegion == null)
+            return null;
 
         existingRegion.Code = region.Code;
         existingRegion.Name = region.Name;
@@ -58,7 +57,8 @@ public class SqlRegionRepository : IRegionRepository
     {
         var existingRegion = await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
 
-        if (existingRegion == null) return null;
+        if (existingRegion == null)
+            return null;
 
         _dbContext.Regions.Remove(existingRegion);
         await _dbContext.SaveChangesAsync();

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using NZWalks.CustomActionFilters;
 using NZWalks.Models.Domain;
 using NZWalks.Models.DTO;
-using NZWalks.Models.Repositories;
+using NZWalks.Repositories;
 
 namespace NZWalks.Controllers;
 

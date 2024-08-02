@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using NZWalks.CustomActionFilters;
 using NZWalks.Models.DTO;
-using NZWalks.Models.Repositories;
+using NZWalks.Repositories;
 using PostmarkDotNet;
 
 namespace NZWalks.Controllers;
@@ -18,10 +18,13 @@ public class AuthController : ControllerBase
     private readonly IOptions<PostmarkSettings> _postmarkSettings;
     private readonly IConfiguration _configuration; // Define a field to hold the IConfiguration instance
 
-    public AuthController(UserManager<IdentityUser> userManager,
-        ITokenRepository tokenRepository, PostmarkClient postmarkClient,
+    public AuthController(
+        UserManager<IdentityUser> userManager,
+        ITokenRepository tokenRepository,
+        PostmarkClient postmarkClient,
         IOptions<PostmarkSettings> postmarkSettings,
-        IConfiguration configuration)
+        IConfiguration configuration
+    )
     {
         _userManager = userManager;
         _tokenRepository = tokenRepository;
@@ -40,13 +43,20 @@ public class AuthController : ControllerBase
             UserName = registerRequestDto.Username,
             Email = registerRequestDto.Username
         };
-        var identityResult = await _userManager.CreateAsync(identityUser, registerRequestDto.Password);
+        var identityResult = await _userManager.CreateAsync(
+            identityUser,
+            registerRequestDto.Password
+        );
         if (identityResult.Succeeded)
             //Add roles to this user
             if (registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
             {
-                identityResult = await _userManager.AddToRolesAsync(identityUser, registerRequestDto.Roles);
-                if (identityResult.Succeeded) return Ok("User created successfully!");
+                identityResult = await _userManager.AddToRolesAsync(
+                    identityUser,
+                    registerRequestDto.Roles
+                );
+                if (identityResult.Succeeded)
+                    return Ok("User created successfully!");
             }
 
         return BadRequest("Something went wrong! Please try again.");
@@ -58,7 +68,10 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequestDto)
     {
         var identityUser = await _userManager.FindByEmailAsync(loginRequestDto.Username);
-        if (identityUser != null && await _userManager.CheckPasswordAsync(identityUser, loginRequestDto.Password))
+        if (
+            identityUser != null
+            && await _userManager.CheckPasswordAsync(identityUser, loginRequestDto.Password)
+        )
         {
             //get roles for this user
             var roles = await _userManager.GetRolesAsync(identityUser);
@@ -66,14 +79,10 @@ public class AuthController : ControllerBase
             {
                 //create JWT token
                 var jwtToken = _tokenRepository.CreateJWTToken(identityUser, roles.ToList());
-                var response = new LoginResponseDto()
-                {
-                    JwtToken = jwtToken
-                };
+                var response = new LoginResponseDto() { JwtToken = jwtToken };
                 return Ok(response);
             }
         }
-
 
         return BadRequest("Invalid login attempt");
     }
@@ -81,7 +90,9 @@ public class AuthController : ControllerBase
     //POST: https://localhost:7103/api/auth/RequestResetPassword
     [HttpPost]
     [Route("RequestResetPassword")]
-    public async Task<IActionResult> RequestResetPassword([FromBody] ResetPasswordRequestDto request)
+    public async Task<IActionResult> RequestResetPassword(
+        [FromBody] ResetPasswordRequestDto request
+    )
     {
         var user = await _userManager.FindByEmailAsync(request.Username);
         if (user == null)
@@ -95,7 +106,8 @@ public class AuthController : ControllerBase
 
         var token = await _userManager.GeneratePasswordResetTokenAsync(user);
         // var callbackUrl = $"{_configuration["ClientUrl"]}/reset-password?token={Uri.EscapeDataString(token)}&email={Uri.EscapeDataString(user.Email)}";
-        var callbackUrl = $"{clientUrl}/reset-password?token={Uri.EscapeDataString(token)}&email={Uri.EscapeDataString(user.Email)}";
+        var callbackUrl =
+            $"{clientUrl}/reset-password?token={Uri.EscapeDataString(token)}&email={Uri.EscapeDataString(user.Email)}";
         var message = new PostmarkMessage()
         {
             To = user.Email,

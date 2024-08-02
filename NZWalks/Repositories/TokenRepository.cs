@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 
-namespace NZWalks.Models.Repositories;
+namespace NZWalks.Repositories;
 
 public class TokenRepository : ITokenRepository
 {
@@ -21,7 +21,8 @@ public class TokenRepository : ITokenRepository
         var claims = new List<Claim>();
         claims.Add(new Claim(ClaimTypes.Email, user.Email));
 
-        foreach (var role in roles) claims.Add(new Claim(ClaimTypes.Role, role));
+        foreach (var role in roles)
+            claims.Add(new Claim(ClaimTypes.Role, role));
 
         //
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
