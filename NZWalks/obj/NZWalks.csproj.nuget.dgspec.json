@@ -1,32 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj": {}
+    "C:\\devs\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj": {}
   },
   "projects": {
-    "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj": {
+    "C:\\devs\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj",
+        "projectUniqueName": "C:\\devs\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj",
         "projectName": "NZWalks",
-        "projectPath": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj",
-        "packagesPath": "C:\\Users\\wsgdd\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\NZWalks.API-Net7\\NZWalks\\obj\\",
+        "projectPath": "C:\\devs\\NZWalks.API-Net7\\NZWalks\\NZWalks.csproj",
+        "packagesPath": "C:\\Users\\Junlin\\.nuget\\packages\\",
+        "outputPath": "C:\\devs\\NZWalks.API-Net7\\NZWalks\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\wsgdd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Junlin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -34,11 +38,16 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -77,6 +86,12 @@
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[6.35.0, )"
+            },
+            "Microsoft.TypeScript.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.7.3, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -130,7 +145,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
